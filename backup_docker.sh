@@ -18,7 +18,7 @@ docker ps |awk 'BEGIN {first = 1; last = 2 }
 }' > execute_backup.sh
 
 echo "echo \">>>>>>>>>>>>>> ARCHAVING IOTStack folder................\n\"" >> execute_backup.sh
-echo "tar -czvf IOTstack.tar.gz /home/pi/IOTstack/" >>  execute_backup.sh
+echo "sudo tar -czvf IOTstack.tar.gz /home/pi/IOTstack/" >>  execute_backup.sh
 
 
 if [ -d "$DIR_EX_DRIVE" ]; then
