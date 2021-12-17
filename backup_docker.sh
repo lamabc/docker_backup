@@ -25,7 +25,7 @@ if [ -d "$DIR_EX_DRIVE" ]; then
   ### Take action if $DIR exists ###
   echo "echo \"Copy containers files in ${DIR}...\"" >> execute_backup.sh
   echo "sudo cp -r  /home/pi/containers/* ${DIR_EX_DRIVE} " >> execute_backup.sh
-  echo "sudo cp -r  /home/pi/work/backup/docker_backup/IOTstack.tar.gz ${DIR_EX_DRIVE} " >> execute_backup.sh  
+  echo "sudo cp -r  `pwd`/IOTstack.tar.gz ${DIR_EX_DRIVE} " >> execute_backup.sh  
 else
   ###  Control will jump here if $DIR does NOT exists ###
   echo "echo \"Error: ${DIR_EX_DRIVE} not found. Can not continue.\"" >> execute_backup.sh
